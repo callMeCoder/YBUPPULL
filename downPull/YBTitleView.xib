@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YBTitleView">
+            <rect key="frame" x="0.0" y="0.0" width="421" height="34"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view tag="2000" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UO8-w3-Lkg">
+                    <rect key="frame" x="140" y="0.0" width="140" height="34"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车辆配置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yzf-f3-wz3">
+                            <rect key="frame" x="42" y="9" width="56" height="17"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="Yzf-f3-wz3" firstAttribute="centerX" secondItem="UO8-w3-Lkg" secondAttribute="centerX" id="V6j-SA-5hZ"/>
+                        <constraint firstItem="Yzf-f3-wz3" firstAttribute="centerY" secondItem="UO8-w3-Lkg" secondAttribute="centerY" id="niM-sw-pN8"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="CVG-bI-9Ne" appends="YES" id="bC7-Bc-bqw"/>
+                    </connections>
+                </view>
+                <view tag="3000" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3yI-Tq-c0H">
+                    <rect key="frame" x="280" y="0.0" width="141" height="34"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="购车说明" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIw-sk-M1A">
+                            <rect key="frame" x="43" y="9" width="56" height="17"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="jIw-sk-M1A" firstAttribute="centerY" secondItem="3yI-Tq-c0H" secondAttribute="centerY" id="Hcm-wS-cHY"/>
+                        <constraint firstItem="jIw-sk-M1A" firstAttribute="centerX" secondItem="3yI-Tq-c0H" secondAttribute="centerX" id="oak-fj-Ows"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="aw0-9D-icP" appends="YES" id="aNR-J7-0iB"/>
+                    </connections>
+                </view>
+                <view tag="1000" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ai-4d-WFp">
+                    <rect key="frame" x="0.0" y="0.0" width="140" height="34"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="车辆详情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grN-Cs-yid">
+                            <rect key="frame" x="42" y="9" width="56" height="17"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="grN-Cs-yid" firstAttribute="centerY" secondItem="0Ai-4d-WFp" secondAttribute="centerY" id="YGP-j8-H5c"/>
+                        <constraint firstItem="grN-Cs-yid" firstAttribute="centerX" secondItem="0Ai-4d-WFp" secondAttribute="centerX" id="vGP-X2-T0g"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Utw-Y9-9cH" appends="YES" id="suv-14-I2H"/>
+                    </connections>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="3yI-Tq-c0H" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3gc-VX-hna"/>
+                <constraint firstAttribute="bottom" secondItem="0Ai-4d-WFp" secondAttribute="bottom" id="7RG-bh-jhX"/>
+                <constraint firstAttribute="bottom" secondItem="3yI-Tq-c0H" secondAttribute="bottom" id="8KH-ey-Yt7"/>
+                <constraint firstItem="0Ai-4d-WFp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8cy-Mr-YdB"/>
+                <constraint firstAttribute="bottom" secondItem="UO8-w3-Lkg" secondAttribute="bottom" id="Dar-bz-Unt"/>
+                <constraint firstItem="UO8-w3-Lkg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="K2z-bF-QPy"/>
+                <constraint firstItem="UO8-w3-Lkg" firstAttribute="width" secondItem="0Ai-4d-WFp" secondAttribute="width" id="Ncf-tH-ssf"/>
+                <constraint firstItem="UO8-w3-Lkg" firstAttribute="height" secondItem="0Ai-4d-WFp" secondAttribute="height" id="OJj-92-RAo"/>
+                <constraint firstItem="0Ai-4d-WFp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PVF-ee-dZL"/>
+                <constraint firstItem="UO8-w3-Lkg" firstAttribute="leading" secondItem="0Ai-4d-WFp" secondAttribute="trailing" id="Xid-WS-HHU"/>
+                <constraint firstItem="3yI-Tq-c0H" firstAttribute="width" secondItem="UO8-w3-Lkg" secondAttribute="width" id="hr1-eP-gIz"/>
+                <constraint firstItem="0Ai-4d-WFp" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="1:3" id="nnW-BB-Mil"/>
+                <constraint firstAttribute="trailing" secondItem="3yI-Tq-c0H" secondAttribute="trailing" id="uI3-aG-fDF"/>
+                <constraint firstItem="3yI-Tq-c0H" firstAttribute="height" secondItem="UO8-w3-Lkg" secondAttribute="height" id="wJW-rw-rxQ"/>
+                <constraint firstItem="3yI-Tq-c0H" firstAttribute="leading" secondItem="UO8-w3-Lkg" secondAttribute="trailing" id="yv6-qm-w26"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="hr1-eP-gIz"/>
+                    <exclude reference="wJW-rw-rxQ"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="firstView" destination="0Ai-4d-WFp" id="w1f-mh-hbJ"/>
+                <outlet property="secondView" destination="UO8-w3-Lkg" id="zkv-8r-Jce"/>
+                <outlet property="thirdView" destination="3yI-Tq-c0H" id="z8S-Sg-R88"/>
+            </connections>
+            <point key="canvasLocation" x="569.5" y="457"/>
+        </view>
+        <tapGestureRecognizer id="Utw-Y9-9cH" userLabel="1">
+            <connections>
+                <action selector="titleViewClickAction:" destination="iN0-l3-epB" id="MYY-Fj-9nm"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="CVG-bI-9Ne" userLabel="2">
+            <connections>
+                <action selector="titleViewClickAction:" destination="iN0-l3-epB" id="Dh3-7x-ySC"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="aw0-9D-icP" userLabel="3">
+            <connections>
+                <action selector="titleViewClickAction:" destination="iN0-l3-epB" id="PpW-c1-eOi"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

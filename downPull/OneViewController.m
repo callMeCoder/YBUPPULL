@@ -7,56 +7,127 @@
 //
 
 #import "OneViewController.h"
-
-@interface OneViewController ()<UIScrollViewDelegate,UIWebViewDelegate>
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (nonatomic, weak)UIWebView *webView;
+#import "UIView+Ex.h"
+#import "YBCustomViewOne.h"
+#import "YBCustomViewThree.h"
+#import "YBCustomViewTwo.h"
+#import "YBTitleView.h"
+#define SCREEN_HIGTH [UIScreen mainScreen].bounds.size.height
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define ITEMINDEX 3
+@interface OneViewController ()<UIScrollViewDelegate,UIWebViewDelegate,YBBaseCustomViewDelegate>
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *scrollViewHeight;
 
 @end
 
 @implementation OneViewController
+{
+    UIView *_customScrollView;
+    YBCustomViewOne *_oneView;
+    YBCustomViewTwo *_twoView;
+    YBCustomViewThree *_threeView;
+    UIView *_downView;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.scrollView.delegate = self;
-    UIView *down = [[UIView alloc] initWithFrame:CGRectMake(0, 667, 375, 667)];
-    [self.contentView addSubview:down];
-    down.backgroundColor = [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
-    
-    UIWebView *webView = [[UIWebView alloc] init];
-    self.webView = webView;
-    webView.frame = self.view.bounds;
-    [down addSubview:webView];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]];
-    
-    [webView loadRequest:request];
-    webView.delegate = self;
-    webView.scrollView.delegate = self;
-}
-- (void)add
-{
-      NSLog(@"%s",__FUNCTION__);
+    self.contentHeight.constant = SCREEN_HIGTH * 2;
+    self.scrollViewHeight.constant = SCREEN_HIGTH;
+    [self.contentView layoutIfNeeded];
 }
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    if (scrollView.contentOffset.y  > scrollView.contentSize.height - [UIScreen mainScreen].bounds.size.height && scrollView.contentOffset.y != -64 && [scrollView isEqual:self.scrollView]) {
+    if (scrollView.contentOffset.y  > scrollView.contentSize.height - SCREEN_HIGTH + 64 && scrollView.contentOffset.y != -64 && [scrollView isEqual:self.scrollView]) {// 上拉幅度
+        [UIView animateWithDuration:0.4f animations:^{
+            if (SCREEN_HIGTH == 480) {
+                self.contentView.y = - SCREEN_HIGTH;
+            }else{
+                self.contentView.transform = CGAffineTransformMakeTranslation(0, - SCREEN_HIGTH);
+            }
+        }completion:^(BOOL finished) {
+            [self downView];
+        }];
+    }
+}
+/**  上拉后弹出的View*/
+- (void)downView
+{
+    if (_downView == nil) {
+         // 下半部分的容器View
+        _downView = [[UIView alloc] initWithFrame:CGRectMake(0, SCREEN_HIGTH, SCREEN_WIDTH, SCREEN_HIGTH)];
+        [self.contentView addSubview:_downView];
         
-        [UIView animateWithDuration:0.25f animations:^{
-            self.contentView.transform = CGAffineTransformMakeTranslation(0, -[UIScreen mainScreen].bounds.size.height);
+        {
+            YBTitleView *titleView = [YBTitleView customTitleView];
+            titleView.frame = CGRectMake(0, 64, _downView.width, 40);
+            [titleView setScrollActionBlock:^(KTITLEVIEWTAG titleTag) {
+                    if (titleTag == KTITLEVIEWTAGFIRST) {
+                        if (_oneView) {
+                            [_customScrollView bringSubviewToFront:_oneView];
+                        }
+                    }else if (titleTag == KTITLEVIEWTAGSECOND){
+                        if (_twoView) {
+                            [_customScrollView bringSubviewToFront:_twoView];
+                        }else{
+                            _twoView = [YBCustomViewTwo customViewTwo];
+                            _twoView.frame = CGRectMake(0, 0, _downView.width, _downView.height - _customScrollView.y);
+                            _twoView.delegate = self;
+                            _twoView.urlString = @"https://www.google.com";
+                            [_customScrollView addSubview:_twoView];
+                        }
+                    }else{
+                        if (_threeView) {
+                            [_customScrollView bringSubviewToFront:_threeView];
+                        }else{
+                            _threeView = [YBCustomViewThree customViewThree];
+                            _threeView.frame = CGRectMake(0, 0, _downView.width, _downView.height - _customScrollView.y);
+                            _threeView.urlString = @"https://github.com";
+                            _threeView.delegate = self;
+                            [_customScrollView addSubview:_threeView];
+                        }
+                    }
+                    NSLog(@"%zd",_customScrollView.subviews.count);
+            }];
+            [_downView addSubview:titleView];
+        }
+         // 左右滑动的scrollView
+        {
+            _customScrollView = [[UIScrollView alloc] init];
+            _customScrollView.frame = CGRectMake(0, 64 + 40, _downView.width * ITEMINDEX, _downView.height - _customScrollView.y);
+            [_downView addSubview:_customScrollView];
+            
+        }
+        {
+            _oneView = [YBCustomViewOne customViewOne];
+            _oneView.delegate = self;
+            _oneView.frame = CGRectMake(0, 0, _downView.width, _downView.height- _customScrollView.y);
+            _oneView.urlString = @"https://www.baidu.com";
+            [_customScrollView addSubview:_oneView];
+        }
+    }
+}
+#pragma mark -
+#pragma mark - 自定义视图回调
+- (void)customViewUpPullActionWithCustomViewOne:(YBBaseCustomView *)customViewOne
+{
+    [self upActionWithWebView:customViewOne.webView];
+}
+- (void)upActionWithWebView:(UIWebView *)webView
+{
+    if(webView.scrollView.contentOffset.y < 0){
+        [UIView animateWithDuration:0.4f animations:^{
+            if (SCREEN_HIGTH == 480) {
+                self.contentView.y = 0;
+            }else{
+                self.contentView.transform = CGAffineTransformIdentity;
+            }
         }completion:^(BOOL finished) {
             
         }];
-    }
-    
-    if ([scrollView isEqual:self.webView.scrollView]) {
-        NSLog(@"%f",scrollView.contentOffset.y);
-        if(scrollView.contentOffset.y < 0){
-            [UIView animateWithDuration:0.25f animations:^{
-                self.contentView.transform = CGAffineTransformIdentity;
-            }];
-        }
     }
 }
 @end

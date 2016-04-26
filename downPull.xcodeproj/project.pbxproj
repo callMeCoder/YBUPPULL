@@ -18,7 +18,16 @@
 		BF9718011C503AF00041B126 /* downPullUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9718001C503AF00041B126 /* downPullUITests.m */; };
 		BF9718111C503B1B0041B126 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF97180F1C503B1B0041B126 /* OneViewController.m */; };
 		BF9718121C503B1B0041B126 /* OneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9718101C503B1B0041B126 /* OneViewController.xib */; };
-		BF9718161C5043FF0041B126 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9718141C5043FF0041B126 /* TwoViewController.m */; };
+		BFC882C51CCF925700134C3A /* UIView+Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC882C41CCF925700134C3A /* UIView+Ex.m */; };
+		BFC882C81CCF939000134C3A /* YBCustomViewOne.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC882C71CCF939000134C3A /* YBCustomViewOne.m */; };
+		BFC882CD1CCF953B00134C3A /* YBTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC882CC1CCF953B00134C3A /* YBTitleView.m */; };
+		BFC882CF1CCF954600134C3A /* YBTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFC882CE1CCF954600134C3A /* YBTitleView.xib */; };
+		BFC882D11CCF972A00134C3A /* YBCustomViewOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFC882D01CCF972A00134C3A /* YBCustomViewOne.xib */; };
+		BFC882D41CCF97FC00134C3A /* YBCustomViewTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC882D31CCF97FC00134C3A /* YBCustomViewTwo.m */; };
+		BFC882D61CCF980200134C3A /* YBCustomViewTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFC882D51CCF980200134C3A /* YBCustomViewTwo.xib */; };
+		BFC882D91CCF980C00134C3A /* YBCustomViewThree.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC882D81CCF980C00134C3A /* YBCustomViewThree.m */; };
+		BFC882DB1CCF981000134C3A /* YBCustomViewThree.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFC882DA1CCF981000134C3A /* YBCustomViewThree.xib */; };
+		BFC882DE1CCFB0C200134C3A /* YBBaseCustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC882DD1CCFB0C200134C3A /* YBBaseCustomView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +68,22 @@
 		BF97180E1C503B1B0041B126 /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
 		BF97180F1C503B1B0041B126 /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
 		BF9718101C503B1B0041B126 /* OneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneViewController.xib; sourceTree = "<group>"; };
-		BF9718131C5043FF0041B126 /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
-		BF9718141C5043FF0041B126 /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
+		BFC882C31CCF925700134C3A /* UIView+Ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ex.h"; sourceTree = "<group>"; };
+		BFC882C41CCF925700134C3A /* UIView+Ex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ex.m"; sourceTree = "<group>"; };
+		BFC882C61CCF939000134C3A /* YBCustomViewOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBCustomViewOne.h; sourceTree = "<group>"; };
+		BFC882C71CCF939000134C3A /* YBCustomViewOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBCustomViewOne.m; sourceTree = "<group>"; };
+		BFC882CB1CCF953B00134C3A /* YBTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBTitleView.h; sourceTree = "<group>"; };
+		BFC882CC1CCF953B00134C3A /* YBTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBTitleView.m; sourceTree = "<group>"; };
+		BFC882CE1CCF954600134C3A /* YBTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YBTitleView.xib; sourceTree = "<group>"; };
+		BFC882D01CCF972A00134C3A /* YBCustomViewOne.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YBCustomViewOne.xib; sourceTree = "<group>"; };
+		BFC882D21CCF97FC00134C3A /* YBCustomViewTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBCustomViewTwo.h; sourceTree = "<group>"; };
+		BFC882D31CCF97FC00134C3A /* YBCustomViewTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBCustomViewTwo.m; sourceTree = "<group>"; };
+		BFC882D51CCF980200134C3A /* YBCustomViewTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YBCustomViewTwo.xib; sourceTree = "<group>"; };
+		BFC882D71CCF980C00134C3A /* YBCustomViewThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBCustomViewThree.h; sourceTree = "<group>"; };
+		BFC882D81CCF980C00134C3A /* YBCustomViewThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBCustomViewThree.m; sourceTree = "<group>"; };
+		BFC882DA1CCF981000134C3A /* YBCustomViewThree.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YBCustomViewThree.xib; sourceTree = "<group>"; };
+		BFC882DC1CCFB0C200134C3A /* YBBaseCustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBBaseCustomView.h; sourceTree = "<group>"; };
+		BFC882DD1CCFB0C200134C3A /* YBBaseCustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBBaseCustomView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +134,8 @@
 		BF9717D71C503AF00041B126 /* downPull */ = {
 			isa = PBXGroup;
 			children = (
+				BFC882C31CCF925700134C3A /* UIView+Ex.h */,
+				BFC882C41CCF925700134C3A /* UIView+Ex.m */,
 				BF9717DB1C503AF00041B126 /* AppDelegate.h */,
 				BF9717DC1C503AF00041B126 /* AppDelegate.m */,
 				BF9717DE1C503AF00041B126 /* ViewController.h */,
@@ -118,8 +143,20 @@
 				BF97180E1C503B1B0041B126 /* OneViewController.h */,
 				BF97180F1C503B1B0041B126 /* OneViewController.m */,
 				BF9718101C503B1B0041B126 /* OneViewController.xib */,
-				BF9718131C5043FF0041B126 /* TwoViewController.h */,
-				BF9718141C5043FF0041B126 /* TwoViewController.m */,
+				BFC882C61CCF939000134C3A /* YBCustomViewOne.h */,
+				BFC882C71CCF939000134C3A /* YBCustomViewOne.m */,
+				BFC882D01CCF972A00134C3A /* YBCustomViewOne.xib */,
+				BFC882D21CCF97FC00134C3A /* YBCustomViewTwo.h */,
+				BFC882D31CCF97FC00134C3A /* YBCustomViewTwo.m */,
+				BFC882D51CCF980200134C3A /* YBCustomViewTwo.xib */,
+				BFC882D71CCF980C00134C3A /* YBCustomViewThree.h */,
+				BFC882D81CCF980C00134C3A /* YBCustomViewThree.m */,
+				BFC882DA1CCF981000134C3A /* YBCustomViewThree.xib */,
+				BFC882DC1CCFB0C200134C3A /* YBBaseCustomView.h */,
+				BFC882DD1CCFB0C200134C3A /* YBBaseCustomView.m */,
+				BFC882CB1CCF953B00134C3A /* YBTitleView.h */,
+				BFC882CC1CCF953B00134C3A /* YBTitleView.m */,
+				BFC882CE1CCF954600134C3A /* YBTitleView.xib */,
 				BF9717E11C503AF00041B126 /* Main.storyboard */,
 				BF9717E71C503AF00041B126 /* Assets.xcassets */,
 				BF9717E91C503AF00041B126 /* LaunchScreen.storyboard */,
@@ -218,6 +255,7 @@
 		BF9717CD1C503AF00041B126 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = YB;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = CMC;
 				TargetAttributes = {
@@ -260,9 +298,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF9717EB1C503AF00041B126 /* LaunchScreen.storyboard in Resources */,
+				BFC882D11CCF972A00134C3A /* YBCustomViewOne.xib in Resources */,
 				BF9717E81C503AF00041B126 /* Assets.xcassets in Resources */,
+				BFC882CF1CCF954600134C3A /* YBTitleView.xib in Resources */,
 				BF9717E31C503AF00041B126 /* Main.storyboard in Resources */,
 				BF9718121C503B1B0041B126 /* OneViewController.xib in Resources */,
+				BFC882D61CCF980200134C3A /* YBCustomViewTwo.xib in Resources */,
+				BFC882DB1CCF981000134C3A /* YBCustomViewThree.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,11 +329,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFC882D41CCF97FC00134C3A /* YBCustomViewTwo.m in Sources */,
+				BFC882CD1CCF953B00134C3A /* YBTitleView.m in Sources */,
 				BF9717E01C503AF00041B126 /* ViewController.m in Sources */,
+				BFC882D91CCF980C00134C3A /* YBCustomViewThree.m in Sources */,
+				BFC882DE1CCFB0C200134C3A /* YBBaseCustomView.m in Sources */,
 				BF9718111C503B1B0041B126 /* OneViewController.m in Sources */,
 				BF9717DD1C503AF00041B126 /* AppDelegate.m in Sources */,
-				BF9718161C5043FF0041B126 /* TwoViewController.m in Sources */,
 				BF9717E61C503AF00041B126 /* downPull.xcdatamodeld in Sources */,
+				BFC882C51CCF925700134C3A /* UIView+Ex.m in Sources */,
+				BFC882C81CCF939000134C3A /* YBCustomViewOne.m in Sources */,
 				BF9717DA1C503AF00041B126 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,6 +563,7 @@
 				BF9718071C503AF00041B126 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF9718081C503AF00041B126 /* Build configuration list for PBXNativeTarget "downPullTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +572,7 @@
 				BF97180A1C503AF00041B126 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF97180B1C503AF00041B126 /* Build configuration list for PBXNativeTarget "downPullUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +581,7 @@
 				BF97180D1C503AF00041B126 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
