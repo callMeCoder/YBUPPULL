@@ -61,6 +61,7 @@
         _downView = [[UIView alloc] initWithFrame:CGRectMake(0, SCREEN_HIGTH, SCREEN_WIDTH, SCREEN_HIGTH)];
         [self.contentView addSubview:_downView];
         
+        
         {
             YBTitleView *titleView = [YBTitleView customTitleView];
             titleView.frame = CGRectMake(0, 64, _downView.width, 40);
@@ -74,20 +75,16 @@
                             [_customScrollView bringSubviewToFront:_twoView];
                         }else{
                             _twoView = [YBCustomViewTwo customViewTwo];
-                            _twoView.frame = CGRectMake(0, 0, _downView.width, _downView.height - _customScrollView.y);
-                            _twoView.delegate = self;
+                            [self setUpCustomViewWithBaseCustomView:_twoView];
                             _twoView.urlString = @"https://www.google.com";
-                            [_customScrollView addSubview:_twoView];
                         }
                     }else{
                         if (_threeView) {
                             [_customScrollView bringSubviewToFront:_threeView];
                         }else{
                             _threeView = [YBCustomViewThree customViewThree];
-                            _threeView.frame = CGRectMake(0, 0, _downView.width, _downView.height - _customScrollView.y);
+                            [self setUpCustomViewWithBaseCustomView:_threeView];
                             _threeView.urlString = @"https://github.com";
-                            _threeView.delegate = self;
-                            [_customScrollView addSubview:_threeView];
                         }
                     }
                     NSLog(@"%zd",_customScrollView.subviews.count);
@@ -103,12 +100,16 @@
         }
         {
             _oneView = [YBCustomViewOne customViewOne];
-            _oneView.delegate = self;
-            _oneView.frame = CGRectMake(0, 0, _downView.width, _downView.height- _customScrollView.y);
+            [self setUpCustomViewWithBaseCustomView:_oneView];
             _oneView.urlString = @"https://www.baidu.com";
-            [_customScrollView addSubview:_oneView];
         }
     }
+}
+- (void)setUpCustomViewWithBaseCustomView:(YBBaseCustomView *)baseCustomView
+{
+    baseCustomView.delegate = self;
+    baseCustomView.frame = CGRectMake(0, 0, _downView.width, _downView.height- _customScrollView.y);
+    [_customScrollView addSubview:baseCustomView];
 }
 #pragma mark -
 #pragma mark - 自定义视图回调
